@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d3126084-59bc-4856-aea5-00ba27f830ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Unwrapper">
+      <UniqueIdentifier>{ddfda2f7-59cb-4728-bcb8-35976573d741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ff28cc36-cb9b-435a-9c09-5c512238a79c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Unwrapper">
+      <UniqueIdentifier>{7362260c-9581-4528-acbc-c1dcca8a97cc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RoadkillCmd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RoadkillMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkingMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\bestfit.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\cpms.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\FillHole.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\FindPins.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\Island.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\IslandMatch.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\lscm.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\MinimiseStretch.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\Pack.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\PolyFiller.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\Primitives.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\RKProgress.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\Unwrap.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrapper\Vector4.cpp">
+      <Filter>Source Files\Unwrapper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RoadkillCmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkingMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\bestfit.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\cpms.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\FillHole.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\FindPins.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\Island.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\IslandMatch.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\lscm.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\MinimiseStretch.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\Pack.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\PolyFiller.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\Primitives.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\RKProgress.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\Unwrap.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Unwrapper\Vector4.h">
+      <Filter>Header Files\Unwrapper</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

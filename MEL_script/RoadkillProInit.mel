@@ -1,0 +1,714 @@
+// Roadkill Professional version v 1.045 R&D
+
+
+
+global proc RoadkillProGeometric()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	int $RKpackAllInOne = 0;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+	string $cmd = "RoadkillPro -function GEOM -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;
+}
+
+
+
+global proc RoadkillProOrganic()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	int $RKpackAllInOne = 0;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+	string $cmd = "RoadkillPro -function ORGA -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;
+}
+
+
+global proc RoadkillProStraighten()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	int $RKpackAllInOne = 0;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+	string $cmd = "RoadkillPro -function STRA -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;
+}
+
+
+
+global proc RoadkillProSymmetryCut()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	string $cmd = "RoadkillPro -function SYMCUT -s " + $RKislandScale + " -u " + $RKislandUpright;
+	evalEcho $cmd;
+}
+
+
+global proc RoadkillProScalePack()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	int $RKpackAllInOne = 0;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+	string $cmd = "RoadkillPro -function SCALEPACK -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;				// Execute The Command
+}
+
+
+global proc RoadkillProPack()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	int $RKpackAllInOne = 0;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+	string $cmd = "RoadkillPro -function PACK -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;				// Execute The Command
+}
+
+
+
+global proc RoadkillProScaleToSource()
+{
+	int $RKislandScale = 10;
+	int $RKislandUpright = 1;
+	
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	string $cmd = "RoadkillPro -function S2S -s " + $RKislandScale + " -u " + $RKislandUpright;
+	evalEcho $cmd;
+}
+
+
+
+
+
+global proc RoadkillProMinimise()
+{
+	int $RKiterations = 50;
+	int $RKislandUpright = 1;
+	
+	if ( `optionVar -exists rkMinIterations` ) 
+		$RKiterations = `optionVar -q rkMinIterations`; 
+	else 
+		optionVar -intValue rkMinIterations $RKiterations; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	string $cmd = "RoadkillPro -function MINIMISE -s " + $RKiterations + " -u " + $RKislandUpright;
+	evalEcho $cmd;
+}
+
+
+
+global proc RoadkillProMinimiseOptions()
+{
+	if( `window -exists RKMiniWindow` ) 
+	{
+		return;
+	}
+
+	int $RKiterations = 50;
+
+	if ( `optionVar -exists rkMinIterations` ) 
+		$RKiterations = `optionVar -q rkMinIterations`;
+	else 
+		optionVar -intValue rkMinIterations $RKiterations;
+
+
+	window -widthHeight 300 110 -rtf 1 -s 0 -title "Roadkill Minimise Stretch Options" RKMiniWindow;
+
+	columnLayout ColumnLayout;
+	columnLayout -adjustableColumn true;
+		frameLayout -label "Shell Options" -labelAlign "center";
+
+		rowColumnLayout -numberOfColumns 3
+			-columnWidth 1 60
+	      		-columnWidth 2 110
+			-columnWidth 3 30;
+
+			text -height 5 -label " ";
+			text -height 5 -label " ";
+			text -height 5 -label " ";
+
+			text -label " ";
+			text -label "Minimise Iterations";
+                  	intField -width 40 -minValue 1 -maxValue 200 -value $RKiterations -ed 1 RKIterationField;
+
+		setParent ..;
+
+	setParent ..;
+
+
+	text -height 5 -label " ";
+
+	rowLayout -columnAlign3 "center" "center" "center" -numberOfColumns 3;
+	
+	button -height 30 -width 95 -label "Minimise" -command RKMinimise;
+	button -height 30 -width 95 -label "Apply" -command RKApplyMinimise;
+	button -height 30 -width 95 -label "Cancel" -command ("deleteUI -window RKMiniWindow");
+
+	showWindow RKMiniWindow;
+}
+
+
+
+global proc RKMinimise()
+{
+	int $RKiterations;
+	int $RKislandUpright;
+	$RKiterations = `intField -q -value RKIterationField`;
+
+	optionVar -intValue rkMinIterations $RKiterations;
+	$RKislandUpright = `optionVar -q rkIslandUpright`; 
+
+	deleteUI -window RKMiniWindow;
+	string $cmd = "RoadkillPro -function MINIMISE -s " + $RKiterations + " -u " + $RKislandUpright;
+	evalEcho $cmd;
+}
+
+
+global proc RKApplyMinimise()
+{
+	int $RKiterations;
+	int $RKislandUpright;
+	$RKiterations = `intField -q -value RKIterationField`;
+
+	optionVar -intValue rkMinIterations $RKiterations;
+	$RKislandUpright = `optionVar -q rkIslandUpright`; 
+
+	string $cmd = "RoadkillPro -function MINIMISE -s " + $RKiterations + " -u " + $RKislandUpright;
+	evalEcho $cmd;				// Execute The Command
+}
+
+
+
+
+global proc RoadkillProPackOptions()
+{
+	if( `window -exists RKPackOptionsWindow` ) 
+	{
+		return;
+	}
+
+	int $RKislandScale = 10;
+	int $RKislandUpright = 2;
+	int $RKpackAllInOne = 0;
+	int $RKislandMatch = 0;
+	int $RKislandEdgeMatch = 0;
+	int $RKislandSymMatch = 0;
+	int $RKmaintainUVs = 0;
+	float $RKislandMatchAnglesTol = 4.0;
+	float $RKislandMatchEdgeTol = 10.0;
+
+	if ( `optionVar -exists rkIslandScale` ) 
+		$RKislandScale = `optionVar -q rkIslandScale`; 
+	else 
+		optionVar -intValue rkIslandScale $RKislandScale; 
+
+
+	if ( `optionVar -exists rkIslandUpright` ) 
+		$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	else 
+		optionVar -intValue rkIslandUpright $RKislandUpright; 
+
+
+	if ( `optionVar -exists rkPackAllInOne` ) 
+		$RKpackAllInOne = `optionVar -q rkPackAllInOne`; 
+	else 
+		optionVar -intValue rkPackAllInOne $RKpackAllInOne; 
+
+
+	if ( `optionVar -exists rkIslandMatch` ) 
+		$RKislandMatch = `optionVar -q rkIslandMatch`; 
+	else 
+		optionVar -intValue rkIslandMatch $RKislandMatch; 
+
+
+	if ( `optionVar -exists rkIslandEdgeMatch` ) 
+		$RKislandEdgeMatch = `optionVar -q rkIslandEdgeMatch`; 
+	else 
+		optionVar -intValue rkIslandEdgeMatch $RKislandEdgeMatch; 
+
+
+	if ( `optionVar -exists rkIslandSymMatch` ) 
+		$RKislandSymMatch = `optionVar -q rkIslandSymMatch`; 
+	else 
+		optionVar -intValue rkIslandSymMatch $RKislandSymMatch; 
+
+
+	if ( `optionVar -exists rkIslandMatchAnglesTol` ) 
+		$RKislandMatchAnglesTol = `optionVar -q rkIslandMatchAnglesTol`; 
+	else 
+		optionVar -intValue rkIslandMatchAnglesTol $RKislandMatchAnglesTol;
+
+
+	if ( `optionVar -exists rkMaintainUVs` ) 
+		$RKmaintainUVs = `optionVar -q rkMaintainUVs`; 
+	else 
+		optionVar -intValue rkMaintainUVs $RKmaintainUVs;
+
+
+	if ( `optionVar -exists rkIslandMatchEdgeTol` ) 
+		$RKislandMatchEdgeTol = `optionVar -q rkIslandMatchEdgeTol`; 
+	else 
+		optionVar -intValue rkIslandMatchEdgeTol $RKislandMatchEdgeTol;
+
+
+	window -widthHeight 300 120 -rtf 1 -s 0 -title "Roadkill UV Pack Options" RKPackOptionsWindow;
+	columnLayout ColumnLayout;
+	columnLayout -adjustableColumn true;
+		frameLayout -label "Shell Options" -labelAlign "center";
+
+			columnLayout;
+
+			separator -style "none";
+
+			radioButtonGrp -nrb 3
+			-label "Rotate Shells"
+			-labelArray3 "No Rotation" "Upright" "Longest Edge"
+			-vertical
+			-select $RKislandUpright
+			RKIslandRotationRadio;
+
+			separator -style "none";
+
+			checkBoxGrp -ncb 1 -label "Pack onto one map" -value1 $RKpackAllInOne RKAllInOneCheckbox;
+			checkBoxGrp -ncb 1 -label "Maintain UVs" -value1 $RKmaintainUVs RKMaintainUVsCheckbox;
+
+			separator -style "none";
+
+			intFieldGrp
+				-nf 1
+				-label "Shell Border Scale" - extraLabel "%"
+				-value1 $RKislandScale
+				RKBorderScaleField;
+				
+			separator -style "none";
+
+		setParent ..;
+
+	setParent ..;
+
+	frameLayout -label "Shell Match Options" -labelAlign "center";
+
+		columnLayout;
+
+			separator -style "none";
+
+			checkBoxGrp -ncb 1 -label "Match Shells" -value1 $RKislandMatch RKIslandMatchCheckBox;
+			checkBoxGrp -ncb 1 -label "Match Symmetrical Shells" -value1 $RKislandSymMatch RKIslandMatchSymCheckBox;
+			checkBoxGrp -ncb 1 -label "Match Edge Lengths" -value1 $RKislandEdgeMatch RKIslandMatchEdgeCheckBox;
+
+			separator -style "none";
+
+			intFieldGrp
+				-nf 1
+				-label "Interior Angle Tolerence" - extraLabel "degrees"
+				-value1 $RKislandMatchAnglesTol
+				RKIslandMatchAnglesValue;
+
+			intFieldGrp
+				-nf 1
+				-label "Edge Length Tolerence" - extraLabel "%"
+				-value1 $RKislandMatchEdgeTol
+				RKIslandMatchEdgeValue;
+
+		setParent ..;
+
+	setParent ..;
+
+
+	text -height 5 -label " ";
+
+	rowLayout -columnAlign3 "center" "center" "center" -numberOfColumns 3;
+	
+	button -height 30 -width 95 -label "Pack" -command RKPack;
+	button -height 30 -width 95 -label "Apply" -command RKPackApply;
+	button -height 30 -width 95 -label "Cancel" -command ("deleteUI -window RKPackOptionsWindow");
+
+	showWindow RKPackOptionsWindow;
+}
+
+
+
+
+global proc RKPack()
+{
+	int $RKislandScale;
+	int $RKislandUpright;
+	int $RKpackAllInOne;
+	int $RKislandMatch;
+	int $RKislandEdgeMatch;
+	int $RKislandSymMatch;
+	int $RKmaintainUVs;
+	float $RKislandMatchAnglesTol;
+	float $RKislandMatchEdgeTol;
+
+	$RKislandScale = `intFieldGrp -q -value1 RKBorderScaleField`;
+	//$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	$RKislandUpright = `radioButtonGrp -q -sl RKIslandRotationRadio`;
+	$RKpackAllInOne = `checkBoxGrp -q -value1 RKAllInOneCheckbox`;
+	$RKislandMatch = `checkBoxGrp -q -value1 RKIslandMatchCheckBox`;
+	$RKislandEdgeMatch = `checkBoxGrp -q -value1 RKIslandMatchEdgeCheckBox`;
+	$RKislandSymMatch = `checkBoxGrp -q -value1 RKIslandMatchSymCheckBox`;
+	$RKmaintainUVs = `checkBoxGrp -q -value1 RKMaintainUVsCheckbox`;
+
+	$RKislandMatchAnglesTol = `intFieldGrp -q -value1 RKIslandMatchAnglesValue`;
+	$RKislandMatchEdgeTol = `intFieldGrp -q -value1 RKIslandMatchEdgeValue`;
+
+	optionVar -intValue rkIslandScale $RKislandScale;
+	optionVar -intValue rkIslandUpright $RKislandUpright;
+	optionVar -intValue rkIslandMatch $RKislandMatch;
+	optionVar -intValue rkIslandEdgeMatch $RKislandEdgeMatch;
+	optionVar -intValue rkIslandSymMatch $RKislandSymMatch; 
+	optionVar -intValue rkIslandMatchAnglesTol $RKislandMatchAnglesTol;
+	optionVar -intValue rkIslandMatchEdgeTol $RKislandMatchEdgeTol;
+	optionVar -intValue rkMaintainUVs $RKmaintainUVs;
+
+	deleteUI -window RKPackOptionsWindow;
+	string $cmd = "RoadkillPro -function PACK -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;				// Execute The Command
+}
+
+
+global proc RKPackApply()
+{
+	int $RKislandScale;
+	int $RKislandUpright;
+	int $RKpackAllInOne;
+	int $RKislandMatch;
+	int $RKislandEdgeMatch;
+	int $RKislandSymMatch;
+	int $RKmaintainUVs;
+	float $RKislandMatchAnglesTol;
+	float $RKislandMatchEdgeTol;
+
+	$RKislandScale = `intFieldGrp -q -value1 RKBorderScaleField`;
+	//$RKislandUpright = `optionVar -q rkIslandUpright`; 
+	$RKislandUpright = `radioButtonGrp -q -sl RKIslandRotationRadio`;
+	$RKpackAllInOne = `checkBoxGrp -q -value1 RKAllInOneCheckbox`;
+	$RKislandMatch = `checkBoxGrp -q -value1 RKIslandMatchCheckBox`;
+	$RKislandEdgeMatch = `checkBoxGrp -q -value1 RKIslandMatchEdgeCheckBox`;
+	$RKislandSymMatch = `checkBoxGrp -q -value1 RKIslandMatchSymCheckBox`;
+	$RKmaintainUVs = `checkBoxGrp -q -value1 RKMaintainUVsCheckbox`;
+
+	$RKislandMatchAnglesTol = `intFieldGrp -q -value1 RKIslandMatchAnglesValue`;
+	$RKislandMatchEdgeTol = `intFieldGrp -q -value1 RKIslandMatchEdgeValue`;
+
+	optionVar -intValue rkIslandScale $RKislandScale;
+	optionVar -intValue rkIslandUpright $RKislandUpright;
+	optionVar -intValue rkIslandMatch $RKislandMatch;
+	optionVar -intValue rkIslandEdgeMatch $RKislandEdgeMatch;
+	optionVar -intValue rkIslandSymMatch $RKislandSymMatch; 
+	optionVar -intValue rkIslandMatchAnglesTol $RKislandMatchAnglesTol;
+	optionVar -intValue rkIslandMatchEdgeTol $RKislandMatchEdgeTol;
+	optionVar -intValue rkMaintainUVs $RKmaintainUVs;
+
+	string $cmd = "RoadkillPro -function PACK -s " + $RKislandScale + " -u " + $RKislandUpright + " -i " + $RKpackAllInOne;
+	evalEcho $cmd;
+}
+
+
+
+
+
+
+
+
+
+global proc string AddRoadkillMenuItems()
+{
+	//global string $gPolygonsMenus[];
+	global int $gRoadkillItemAddTest;
+	string $parentMenu = RoadkillGetUVMenu();
+
+	if ($gRoadkillItemAddTest == 0) 	// test if the new menu item already exists
+	{
+		setParent -menu $parentMenu;
+		menuItem -divider true;
+		menuItem -label "Roadkill Geometric"
+			-annotation ("Unwrap and Pack Geometric Object(s) UVs")
+ 			-c "RoadkillProGeometric" m_RoadkillGeometric;
+
+		menuItem -label "Roadkill Organic"
+			-annotation ("Unwrap and Pack Organic Object(s) UVs")
+			-c "RoadkillProOrganic" m_RoadkillOrganic;
+
+		menuItem -label "Roadkill Straighten Grid"
+			-annotation ("Unwrap and Pack Grid Object(s) UVs")
+			-c "RoadkillProStraighten" m_RoadkillStraighten;
+
+		menuItem -label "Roadkill Minimise Stretch"
+			-annotation ("Minimise stretch on selected islands(s) UVs")
+			-c "RoadkillProMinimise" m_RoadkillMinimise;
+
+		menuItem -optionBox true
+			-annotation ("Minimise stretch settings")
+			-c "RoadkillProMinimiseOptions" m_RoadkillMinimiseOpt;
+
+		menuItem -label "Roadkill Scale to Source"
+			-annotation ("Scale all selected meshes UVs to source mesh")
+ 			-c "RoadkillProScaleToSource" m_RoadkillScaleToSource;
+
+		menuItem -label "Roadkill Scale and Pack UVs"
+			-annotation ("Relative scale the UV Islands and pack")
+ 			-c "RoadkillProScalePack" m_RoadkillScalePackUVs;
+
+		menuItem -label "Roadkill Pack UVs"
+			-annotation ("Pack all selected to UV window")
+			-c "RoadkillProPack" m_RoadkillPackUVs;
+
+		menuItem -optionBox true
+			-annotation ("UV Packer settings")
+			-c "RoadkillProPackOptions" m_RoadkillPackUVsOpt;
+
+		menuItem -label "Roadkill Symmetry Cut"
+			-annotation ("Apply UV cuts symmetrically")
+			-c "RoadkillProSymmetryCut" m_RoadkillSymCutUVs;
+
+		$gRoadkillItemAddTest = 1;
+	}
+	return "RemoveRoadkillMenuItems()";
+}
+
+
+global proc RemoveRoadkillMenuItems()
+{
+	global int $gRoadkillItemAddTest; 
+	if ($gRoadkillItemAddTest == 1)
+	{
+		deleteUI -mi m_RoadkillGeometric;
+		deleteUI -mi m_RoadkillOrganic;
+		deleteUI -mi m_RoadkillStraighten;
+		deleteUI -mi m_RoadkillMinimise;
+		deleteUI -mi m_RoadkillMinimiseOpt;
+		deleteUI -mi m_RoadkillScaleToSource;
+		deleteUI -mi m_RoadkillScalePackUVs;
+		deleteUI -mi m_RoadkillPackUVs;
+		deleteUI -mi m_RoadkillPackUVsOpt;
+		deleteUI -mi m_RoadkillSymCutUVs;
+	}
+}
+
+
+
+// two small helper functions
+
+global proc textureBorderOn()
+{
+	evalDeferred( "polyOptions -db 0; polyOptions -r -dmb 1; polyOptions -sb 4.0" );
+
+}
+
+
+global proc textureBorderOff()
+{
+	evalDeferred( "polyOptions -db 0; polyOptions -r -dmb 0; polyOptions -sb 1.0" );
+
+}
+
+
+global proc string RoadkillGetUVMenu()
+{
+	global string $gMainUVMenu;
+	global string $gPolygonsMenus[];
+
+	if($gMainUVMenu == "")
+	{
+		return $gPolygonsMenus[7];
+	}
+
+	return $gMainUVMenu;
+}
+
+
+global proc RoadkillProMenu()
+{
+	global string $globRoadkill = "";
+	global string $gPolygonsMenus[];
+	string $menu = RoadkillGetUVMenu();
+	global int $gRoadkillItemAddTest;
+
+	$gRoadkillItemAddTest = 0;
+	addMenuItemSafe($menu, "AddRoadkillMenuItems", "globRoadkill");
+}
+
+
+
+
+
+
+
+global proc string RoadkillProGetMayaVersion()
+{
+	string $mayaVersion = `about -version`;
+  
+   	if(startsWith($mayaVersion, "2017"))
+ 	{
+ 		return "2017";
+ 	}
+
+	error ("RoadkillPro: Cannot load plug-in - version of Maya not supported: " + $mayaVersion);
+	error ("Please contact:  support@RoadkillPro.com");
+  
+ 	return "failed";
+}
+
+
+
+
+global proc LoadRoadkillPlugin()
+{
+	string $version = "";
+	string $mayaVersion = `about -version`;
+
+	$version = RoadkillProGetMayaVersion();
+
+	if($version == "failed")
+	{
+		return;
+	}
+
+	if (`about - is64`)
+	{
+		$version += "_x64";
+	}
+
+
+	string $pluginName = "RoadkillPro" + $version;
+		
+	int $isLoaded = `pluginInfo -query -loaded -command $pluginName`;
+	if (!$isLoaded)
+	{
+		print "RoadkillPro: Loading Plug-in.\n";
+	
+		evalDeferred("autoLoadPlugin \"\" " + $pluginName + " " + $pluginName);
+	}
+}
+
+
+
+global proc RoadkillProInit()
+{
+	LoadRoadkillPlugin();
+}
