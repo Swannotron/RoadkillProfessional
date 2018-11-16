@@ -43,7 +43,7 @@ void Unwrap::DoUnwrap(bool UseCPMS)
 //	return;										// temp!!
     
     
-    if((gFunction == 2 || gFunction == 3) && gMaintainUVs) return;
+    //if((gFunction == 2 || gFunction == 3) && gMaintainUVs) return;
 
 	bool Failed = false;
 	float Scale = (float)gScale / 100.0f;
