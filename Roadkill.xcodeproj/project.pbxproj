@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1535E362195D522004667E5 /* RoadkillCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E332195D522004667E5 /* RoadkillCmd.cpp */; };
+		A1535E372195D522004667E5 /* RoadkillCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E342195D522004667E5 /* RoadkillCmd.h */; };
+		A1535E382195D522004667E5 /* RoadkillMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E352195D522004667E5 /* RoadkillMain.cpp */; };
+		A1535E3B2195DA6E004667E5 /* WorkingMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E392195DA6E004667E5 /* WorkingMesh.cpp */; };
+		A1535E3C2195DA6E004667E5 /* WorkingMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E3A2195DA6E004667E5 /* WorkingMesh.h */; };
+		A1535E5A2195DE14004667E5 /* cpms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E3E2195DE13004667E5 /* cpms.cpp */; };
+		A1535E5B2195DE14004667E5 /* FillHole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E3F2195DE13004667E5 /* FillHole.cpp */; };
+		A1535E5C2195DE14004667E5 /* Primitives.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E402195DE13004667E5 /* Primitives.h */; };
+		A1535E5D2195DE14004667E5 /* Vector4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E412195DE13004667E5 /* Vector4.cpp */; };
+		A1535E5E2195DE14004667E5 /* FindPins.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E422195DE13004667E5 /* FindPins.cpp */; };
+		A1535E5F2195DE14004667E5 /* bestfit.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E432195DE13004667E5 /* bestfit.h */; };
+		A1535E602195DE14004667E5 /* Pack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E442195DE14004667E5 /* Pack.cpp */; };
+		A1535E612195DE14004667E5 /* MinimiseStretch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E452195DE14004667E5 /* MinimiseStretch.cpp */; };
+		A1535E622195DE14004667E5 /* PolyFiller.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E462195DE14004667E5 /* PolyFiller.h */; };
+		A1535E632195DE14004667E5 /* Unwrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E472195DE14004667E5 /* Unwrap.cpp */; };
+		A1535E642195DE14004667E5 /* Vector4.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E482195DE14004667E5 /* Vector4.h */; };
+		A1535E652195DE14004667E5 /* Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E492195DE14004667E5 /* Island.cpp */; };
+		A1535E662195DE14004667E5 /* IslandMatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E4A2195DE14004667E5 /* IslandMatch.cpp */; };
+		A1535E672195DE14004667E5 /* PolyFiller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E4B2195DE14004667E5 /* PolyFiller.cpp */; };
+		A1535E682195DE14004667E5 /* MinimiseStretch.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E4C2195DE14004667E5 /* MinimiseStretch.h */; };
+		A1535E692195DE14004667E5 /* IslandMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E4D2195DE14004667E5 /* IslandMatch.h */; };
+		A1535E6A2195DE14004667E5 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E4E2195DE14004667E5 /* Primitives.cpp */; };
+		A1535E6B2195DE15004667E5 /* lscm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E4F2195DE14004667E5 /* lscm.cpp */; };
+		A1535E6C2195DE15004667E5 /* RKProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E502195DE14004667E5 /* RKProgress.cpp */; };
+		A1535E6D2195DE15004667E5 /* RKProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E512195DE14004667E5 /* RKProgress.h */; };
+		A1535E6E2195DE15004667E5 /* cpms.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E522195DE14004667E5 /* cpms.h */; };
+		A1535E6F2195DE15004667E5 /* FillHole.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E532195DE14004667E5 /* FillHole.h */; };
+		A1535E702195DE15004667E5 /* Island.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E542195DE14004667E5 /* Island.h */; };
+		A1535E712195DE15004667E5 /* bestfit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1535E552195DE14004667E5 /* bestfit.cpp */; };
+		A1535E722195DE15004667E5 /* FindPins.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E562195DE14004667E5 /* FindPins.h */; };
+		A1535E732195DE15004667E5 /* lscm.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E572195DE14004667E5 /* lscm.h */; };
+		A1535E742195DE15004667E5 /* Pack.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E582195DE14004667E5 /* Pack.h */; };
+		A1535E752195DE15004667E5 /* Unwrap.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E592195DE14004667E5 /* Unwrap.h */; };
+		A1535E822195E3A2004667E5 /* mkl_types.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E7E2195E3A2004667E5 /* mkl_types.h */; };
+		A1535E832195E3A2004667E5 /* mkl_dss.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E7F2195E3A2004667E5 /* mkl_dss.h */; };
+		A1535E842195E3A2004667E5 /* mkl_pardiso.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E802195E3A2004667E5 /* mkl_pardiso.h */; };
+		A1535E852195E3A2004667E5 /* mkl.h in Headers */ = {isa = PBXBuildFile; fileRef = A1535E812195E3A2004667E5 /* mkl.h */; };
+		A1535E942195EBA2004667E5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1535E932195EBA2004667E5 /* OpenGL.framework */; };
+		A1C76FBC219EC77E000E8298 /* libmkl_intel_lp64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C76FB9219EC77E000E8298 /* libmkl_intel_lp64.a */; };
+		A1C76FBD219EC77E000E8298 /* libmkl_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C76FBA219EC77E000E8298 /* libmkl_core.a */; };
+		A1C76FBE219EC77E000E8298 /* libmkl_sequential.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C76FBB219EC77E000E8298 /* libmkl_sequential.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1422A3121987E8E00690AAA /* MEL_script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MEL_script; sourceTree = "<group>"; };
+		A1535E332195D522004667E5 /* RoadkillCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoadkillCmd.cpp; sourceTree = "<group>"; };
+		A1535E342195D522004667E5 /* RoadkillCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadkillCmd.h; sourceTree = "<group>"; };
+		A1535E352195D522004667E5 /* RoadkillMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoadkillMain.cpp; sourceTree = "<group>"; };
+		A1535E392195DA6E004667E5 /* WorkingMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkingMesh.cpp; sourceTree = "<group>"; };
+		A1535E3A2195DA6E004667E5 /* WorkingMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkingMesh.h; sourceTree = "<group>"; };
+		A1535E3E2195DE13004667E5 /* cpms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cpms.cpp; path = Unwrapper/cpms.cpp; sourceTree = "<group>"; };
+		A1535E3F2195DE13004667E5 /* FillHole.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FillHole.cpp; path = Unwrapper/FillHole.cpp; sourceTree = "<group>"; };
+		A1535E402195DE13004667E5 /* Primitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Primitives.h; path = Unwrapper/Primitives.h; sourceTree = "<group>"; };
+		A1535E412195DE13004667E5 /* Vector4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector4.cpp; path = Unwrapper/Vector4.cpp; sourceTree = "<group>"; };
+		A1535E422195DE13004667E5 /* FindPins.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FindPins.cpp; path = Unwrapper/FindPins.cpp; sourceTree = "<group>"; };
+		A1535E432195DE13004667E5 /* bestfit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bestfit.h; path = Unwrapper/bestfit.h; sourceTree = "<group>"; };
+		A1535E442195DE14004667E5 /* Pack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pack.cpp; path = Unwrapper/Pack.cpp; sourceTree = "<group>"; };
+		A1535E452195DE14004667E5 /* MinimiseStretch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MinimiseStretch.cpp; path = Unwrapper/MinimiseStretch.cpp; sourceTree = "<group>"; };
+		A1535E462195DE14004667E5 /* PolyFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolyFiller.h; path = Unwrapper/PolyFiller.h; sourceTree = "<group>"; };
+		A1535E472195DE14004667E5 /* Unwrap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unwrap.cpp; path = Unwrapper/Unwrap.cpp; sourceTree = "<group>"; };
+		A1535E482195DE14004667E5 /* Vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector4.h; path = Unwrapper/Vector4.h; sourceTree = "<group>"; };
+		A1535E492195DE14004667E5 /* Island.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Island.cpp; path = Unwrapper/Island.cpp; sourceTree = "<group>"; };
+		A1535E4A2195DE14004667E5 /* IslandMatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IslandMatch.cpp; path = Unwrapper/IslandMatch.cpp; sourceTree = "<group>"; };
+		A1535E4B2195DE14004667E5 /* PolyFiller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PolyFiller.cpp; path = Unwrapper/PolyFiller.cpp; sourceTree = "<group>"; };
+		A1535E4C2195DE14004667E5 /* MinimiseStretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinimiseStretch.h; path = Unwrapper/MinimiseStretch.h; sourceTree = "<group>"; };
+		A1535E4D2195DE14004667E5 /* IslandMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IslandMatch.h; path = Unwrapper/IslandMatch.h; sourceTree = "<group>"; };
+		A1535E4E2195DE14004667E5 /* Primitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Primitives.cpp; path = Unwrapper/Primitives.cpp; sourceTree = "<group>"; };
+		A1535E4F2195DE14004667E5 /* lscm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lscm.cpp; path = Unwrapper/lscm.cpp; sourceTree = "<group>"; };
+		A1535E502195DE14004667E5 /* RKProgress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RKProgress.cpp; path = Unwrapper/RKProgress.cpp; sourceTree = "<group>"; };
+		A1535E512195DE14004667E5 /* RKProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKProgress.h; path = Unwrapper/RKProgress.h; sourceTree = "<group>"; };
+		A1535E522195DE14004667E5 /* cpms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpms.h; path = Unwrapper/cpms.h; sourceTree = "<group>"; };
+		A1535E532195DE14004667E5 /* FillHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FillHole.h; path = Unwrapper/FillHole.h; sourceTree = "<group>"; };
+		A1535E542195DE14004667E5 /* Island.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Island.h; path = Unwrapper/Island.h; sourceTree = "<group>"; };
+		A1535E552195DE14004667E5 /* bestfit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bestfit.cpp; path = Unwrapper/bestfit.cpp; sourceTree = "<group>"; };
+		A1535E562195DE14004667E5 /* FindPins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindPins.h; path = Unwrapper/FindPins.h; sourceTree = "<group>"; };
+		A1535E572195DE14004667E5 /* lscm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lscm.h; path = Unwrapper/lscm.h; sourceTree = "<group>"; };
+		A1535E582195DE14004667E5 /* Pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pack.h; path = Unwrapper/Pack.h; sourceTree = "<group>"; };
+		A1535E592195DE14004667E5 /* Unwrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unwrap.h; path = Unwrapper/Unwrap.h; sourceTree = "<group>"; };
+		A1535E7E2195E3A2004667E5 /* mkl_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mkl_types.h; path = MKL11_3/mkl_types.h; sourceTree = SOURCE_ROOT; };
+		A1535E7F2195E3A2004667E5 /* mkl_dss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mkl_dss.h; path = MKL11_3/mkl_dss.h; sourceTree = SOURCE_ROOT; };
+		A1535E802195E3A2004667E5 /* mkl_pardiso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mkl_pardiso.h; path = MKL11_3/mkl_pardiso.h; sourceTree = SOURCE_ROOT; };
+		A1535E812195E3A2004667E5 /* mkl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mkl.h; path = MKL11_3/mkl.h; sourceTree = SOURCE_ROOT; };
+		A1535E932195EBA2004667E5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		A1C76FB9219EC77E000E8298 /* libmkl_intel_lp64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmkl_intel_lp64.a; path = MKL11_3_MAC/libmkl_intel_lp64.a; sourceTree = "<group>"; };
+		A1C76FBA219EC77E000E8298 /* libmkl_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmkl_core.a; path = MKL11_3_MAC/libmkl_core.a; sourceTree = "<group>"; };
+		A1C76FBB219EC77E000E8298 /* libmkl_sequential.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmkl_sequential.a; path = MKL11_3_MAC/libmkl_sequential.a; sourceTree = "<group>"; };
+		D2AAC0630554660B00DB518D /* Roadkill.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Roadkill.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289988505E68E00004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1535E942195EBA2004667E5 /* OpenGL.framework in Frameworks */,
+				A1C76FBC219EC77E000E8298 /* libmkl_intel_lp64.a in Frameworks */,
+				A1C76FBD219EC77E000E8298 /* libmkl_core.a in Frameworks */,
+				A1C76FBE219EC77E000E8298 /* libmkl_sequential.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* flipUVCmdPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				A1422A3121987E8E00690AAA /* MEL_script */,
+				A1535E7D2195E365004667E5 /* MKL11_3 */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				A1535E8C2195EAA3004667E5 /* Frameworks */,
+			);
+			name = flipUVCmdPlugin;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A1535E3D2195DD86004667E5 /* Unwrapper */,
+				A1535E392195DA6E004667E5 /* WorkingMesh.cpp */,
+				A1535E3A2195DA6E004667E5 /* WorkingMesh.h */,
+				A1535E332195D522004667E5 /* RoadkillCmd.cpp */,
+				A1535E342195D522004667E5 /* RoadkillCmd.h */,
+				A1535E352195D522004667E5 /* RoadkillMain.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC0630554660B00DB518D /* Roadkill.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1535E3D2195DD86004667E5 /* Unwrapper */ = {
+			isa = PBXGroup;
+			children = (
+				A1535E552195DE14004667E5 /* bestfit.cpp */,
+				A1535E432195DE13004667E5 /* bestfit.h */,
+				A1535E3E2195DE13004667E5 /* cpms.cpp */,
+				A1535E522195DE14004667E5 /* cpms.h */,
+				A1535E3F2195DE13004667E5 /* FillHole.cpp */,
+				A1535E532195DE14004667E5 /* FillHole.h */,
+				A1535E422195DE13004667E5 /* FindPins.cpp */,
+				A1535E562195DE14004667E5 /* FindPins.h */,
+				A1535E492195DE14004667E5 /* Island.cpp */,
+				A1535E542195DE14004667E5 /* Island.h */,
+				A1535E4A2195DE14004667E5 /* IslandMatch.cpp */,
+				A1535E4D2195DE14004667E5 /* IslandMatch.h */,
+				A1535E4F2195DE14004667E5 /* lscm.cpp */,
+				A1535E572195DE14004667E5 /* lscm.h */,
+				A1535E452195DE14004667E5 /* MinimiseStretch.cpp */,
+				A1535E4C2195DE14004667E5 /* MinimiseStretch.h */,
+				A1535E442195DE14004667E5 /* Pack.cpp */,
+				A1535E582195DE14004667E5 /* Pack.h */,
+				A1535E4B2195DE14004667E5 /* PolyFiller.cpp */,
+				A1535E462195DE14004667E5 /* PolyFiller.h */,
+				A1535E4E2195DE14004667E5 /* Primitives.cpp */,
+				A1535E402195DE13004667E5 /* Primitives.h */,
+				A1535E502195DE14004667E5 /* RKProgress.cpp */,
+				A1535E512195DE14004667E5 /* RKProgress.h */,
+				A1535E472195DE14004667E5 /* Unwrap.cpp */,
+				A1535E592195DE14004667E5 /* Unwrap.h */,
+				A1535E412195DE13004667E5 /* Vector4.cpp */,
+				A1535E482195DE14004667E5 /* Vector4.h */,
+			);
+			name = Unwrapper;
+			sourceTree = "<group>";
+		};
+		A1535E7D2195E365004667E5 /* MKL11_3 */ = {
+			isa = PBXGroup;
+			children = (
+				A1535E7F2195E3A2004667E5 /* mkl_dss.h */,
+				A1535E802195E3A2004667E5 /* mkl_pardiso.h */,
+				A1535E7E2195E3A2004667E5 /* mkl_types.h */,
+				A1535E812195E3A2004667E5 /* mkl.h */,
+			);
+			name = MKL11_3;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A1535E8C2195EAA3004667E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1C76FBA219EC77E000E8298 /* libmkl_core.a */,
+				A1C76FB9219EC77E000E8298 /* libmkl_intel_lp64.a */,
+				A1C76FBB219EC77E000E8298 /* libmkl_sequential.a */,
+				A1535E932195EBA2004667E5 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC0600554660B00DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1535E682195DE14004667E5 /* MinimiseStretch.h in Headers */,
+				A1535E722195DE15004667E5 /* FindPins.h in Headers */,
+				A1535E832195E3A2004667E5 /* mkl_dss.h in Headers */,
+				A1535E622195DE14004667E5 /* PolyFiller.h in Headers */,
+				A1535E5F2195DE14004667E5 /* bestfit.h in Headers */,
+				A1535E692195DE14004667E5 /* IslandMatch.h in Headers */,
+				A1535E6D2195DE15004667E5 /* RKProgress.h in Headers */,
+				A1535E702195DE15004667E5 /* Island.h in Headers */,
+				A1535E6F2195DE15004667E5 /* FillHole.h in Headers */,
+				A1535E6E2195DE15004667E5 /* cpms.h in Headers */,
+				A1535E732195DE15004667E5 /* lscm.h in Headers */,
+				A1535E742195DE15004667E5 /* Pack.h in Headers */,
+				A1535E752195DE15004667E5 /* Unwrap.h in Headers */,
+				A1535E642195DE14004667E5 /* Vector4.h in Headers */,
+				A1535E5C2195DE14004667E5 /* Primitives.h in Headers */,
+				A1535E372195D522004667E5 /* RoadkillCmd.h in Headers */,
+				A1535E3C2195DA6E004667E5 /* WorkingMesh.h in Headers */,
+				A1535E822195E3A2004667E5 /* mkl_types.h in Headers */,
+				A1535E842195E3A2004667E5 /* mkl_pardiso.h in Headers */,
+				A1535E852195E3A2004667E5 /* mkl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC0620554660B00DB518D /* Roadkill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7F05ED086863A70064D097 /* Build configuration list for PBXNativeTarget "Roadkill" */;
+			buildPhases = (
+				D2AAC0600554660B00DB518D /* Headers */,
+				D2AAC0610554660B00DB518D /* Sources */,
+				D289988505E68E00004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Roadkill;
+			productName = flipUVCmdPlugin;
+			productReference = D2AAC0630554660B00DB518D /* Roadkill.bundle */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 8A7F05F1086863A70064D097 /* Build configuration list for PBXProject "Roadkill" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* flipUVCmdPlugin */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC0620554660B00DB518D /* Roadkill */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC0610554660B00DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1535E662195DE14004667E5 /* IslandMatch.cpp in Sources */,
+				A1535E6C2195DE15004667E5 /* RKProgress.cpp in Sources */,
+				A1535E672195DE14004667E5 /* PolyFiller.cpp in Sources */,
+				A1535E712195DE15004667E5 /* bestfit.cpp in Sources */,
+				A1535E602195DE14004667E5 /* Pack.cpp in Sources */,
+				A1535E5A2195DE14004667E5 /* cpms.cpp in Sources */,
+				A1535E5D2195DE14004667E5 /* Vector4.cpp in Sources */,
+				A1535E612195DE14004667E5 /* MinimiseStretch.cpp in Sources */,
+				A1535E632195DE14004667E5 /* Unwrap.cpp in Sources */,
+				A1535E382195D522004667E5 /* RoadkillMain.cpp in Sources */,
+				A1535E6B2195DE15004667E5 /* lscm.cpp in Sources */,
+				A1535E362195D522004667E5 /* RoadkillCmd.cpp in Sources */,
+				A1535E5B2195DE14004667E5 /* FillHole.cpp in Sources */,
+				A1535E5E2195DE14004667E5 /* FindPins.cpp in Sources */,
+				A1535E6A2195DE14004667E5 /* Primitives.cpp in Sources */,
+				A1535E3B2195DA6E004667E5 /* WorkingMesh.cpp in Sources */,
+				A1535E652195DE14004667E5 /* Island.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8A7F05EE086863A70064D097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_EXTENSION = bundle;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MKL11_3_MAC",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				OTHER_LDFLAGS = (
+					"-Wl,-executable_path,$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+					"-Wl,-exported_symbol,__Z16initializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,__Z18uninitializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,_MApiVersion",
+					"-lOpenMaya",
+					"-lOpenMayaUI",
+					"-lFoundation",
+					"-lmkl_sequential",
+					"-lmkl_intel_lp64",
+					"-lmkl_core",
+					"-framework",
+					AGL,
+					"-framework",
+					OpenGL,
+				);
+				PRODUCT_NAME = Roadkill;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		8A7F05EF086863A70064D097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_EXTENSION = bundle;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MKL11_3_MAC",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_bundle;
+				OTHER_LDFLAGS = (
+					"-Wl,-executable_path,$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+					"-Wl,-exported_symbol,__Z16initializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,__Z18uninitializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,_MApiVersion",
+					"-lOpenMaya",
+					"-lOpenMayaUI",
+					"-lFoundation",
+					"-lmkl_sequential",
+					"-lmkl_intel_lp64",
+					"-lmkl_core",
+					"-framework",
+					AGL,
+					"-framework",
+					OpenGL,
+				);
+				PRODUCT_NAME = Roadkill;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		8A7F05F2086863A70064D097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MAC_PLUGIN,
+					OSMac_,
+					REQUIRE_IOSTREAM,
+					GL_SILENCE_DEPRECATION,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					"$(MAYA_DIRECTORY)/include/",
+					MKL11_3_MAC,
+					Eigen,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/MKL11_3_MAC",
+					"$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MAYA_DIRECTORY = /Applications/Autodesk/maya2018;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Wl,-executable_path,$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+					"-Wl,-exported_symbol,__Z16initializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,__Z18uninitializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,_MApiVersion",
+					"-lOpenMaya",
+					"-lOpenMayaUI",
+					"-lFoundation",
+					"-lmkl_sequential",
+					"-lmkl_intel_lp64",
+					"-lmkl_core",
+					"-framework",
+					AGL,
+					"-framework",
+					OpenGL,
+				);
+			};
+			name = Debug;
+		};
+		8A7F05F3086863A70064D097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MAC_PLUGIN,
+					OSMac_,
+					REQUIRE_IOSTREAM,
+					GL_SILENCE_DEPRECATION,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					"$(MAYA_DIRECTORY)/include/",
+					MKL11_3_MAC,
+					Eigen,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/MKL11_3_MAC",
+					"$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+				);
+				LIBRARY_STYLE = BUNDLE;
+				MAYA_DIRECTORY = /Applications/Autodesk/maya2018;
+				OTHER_LDFLAGS = (
+					"-Wl,-executable_path,$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+					"-Wl,-exported_symbol,__Z16initializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,__Z18uninitializePluginN8Autodesk4Maya16OpenMaya201800007MObjectE",
+					"-Wl,-exported_symbol,_MApiVersion",
+					"-lOpenMaya",
+					"-lOpenMayaUI",
+					"-lFoundation",
+					"-lmkl_sequential",
+					"-lmkl_intel_lp64",
+					"-lmkl_core",
+					"-framework",
+					AGL,
+					"-framework",
+					OpenGL,
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A7F05ED086863A70064D097 /* Build configuration list for PBXNativeTarget "Roadkill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7F05EE086863A70064D097 /* Debug */,
+				8A7F05EF086863A70064D097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8A7F05F1086863A70064D097 /* Build configuration list for PBXProject "Roadkill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7F05F2086863A70064D097 /* Debug */,
+				8A7F05F3086863A70064D097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

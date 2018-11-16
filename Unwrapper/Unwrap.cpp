@@ -32,7 +32,7 @@ vector<RKPolygon*> Unwrap::m_Polygons;
 
 void Unwrap::DoUnwrap(bool UseCPMS)
 {
-	RKProgress::Get().SetText("Creating Islands");
+    RKProgress::Get().SetText("Creating Islands");      //CreatingIslandsString);
 	RKProgress::Get().SetProgress(0);
 
 	// Scale the meshes to be in a 1.0 sphere, because packer is broken
@@ -41,6 +41,9 @@ void Unwrap::DoUnwrap(bool UseCPMS)
 	CreateIslands();
 
 //	return;										// temp!!
+    
+    
+    if((gFunction == 2 || gFunction == 3) && gMaintainUVs) return;
 
 	bool Failed = false;
 	float Scale = (float)gScale / 100.0f;
@@ -90,7 +93,7 @@ void Unwrap::DoUnwrap(bool UseCPMS)
 	}
 
 
-	if (gMaintainUVs)
+	if (gMaintainUVs && (gFunction == 0 || gFunction == 1 || gFunction == 7))
 	{
 		FixZeroArea();
 		return;
@@ -103,7 +106,7 @@ void Unwrap::DoUnwrap(bool UseCPMS)
 	float MinV = 1.0f;
 	float MaxU = 0.0f;
 	float MaxV = 0.0f;
-	int numVertices = m_Vertices.size();
+	int numVertices = (int)m_Vertices.size();
 
 	for(int Index = 0; Index < numVertices; Index++)
 	{
@@ -174,7 +177,7 @@ void Unwrap::ScaleMeshes()
 	float Radius = 0.0f;
 
 
-	unsigned NumberOfVertices = m_Vertices.size();
+	unsigned NumberOfVertices = (int)m_Vertices.size();
 
 	for(unsigned int VertIndex = 0; VertIndex < NumberOfVertices; VertIndex++)
 	{
@@ -224,7 +227,7 @@ void Unwrap::ScaleMeshes()
 bool Unwrap::UnwrapIslands(bool UseCPMS)
 {
 
-	int IslandCount = (m_listOfIslands.size());
+	int IslandCount = (int)m_listOfIslands.size();
 	int IslandIndex = 1;
 	char Message[255];
 
@@ -257,7 +260,7 @@ bool Unwrap::UnwrapIslands(bool UseCPMS)
 
 bool Unwrap::MinimiseIslands()
 {
-	int IslandCount = (m_listOfIslands.size());
+	int IslandCount = (int)m_listOfIslands.size();
 	int IslandIndex = 1;
 	char Message[255];
 
@@ -269,7 +272,8 @@ bool Unwrap::MinimiseIslands()
 		RKProgress::Get().SetText(Message);
 		RKProgress::Get().SetProgress(0);
 
-		bool failed = (*IslandIterator)->Minimise(IslandIndex, IslandCount);
+		//bool failed =
+        (*IslandIterator)->Minimise(IslandIndex, IslandCount);
 		IslandIndex++;
 	}
 
@@ -284,7 +288,7 @@ bool Unwrap::MinimiseIslands()
 
 int Unwrap::SetVertexCount(int Size)
 {
-	int Base = m_Vertices.size();
+	int Base = (int)m_Vertices.size();
 	m_Vertices.resize(Base + Size);
 
 
@@ -334,7 +338,7 @@ bool Unwrap::AddFace(int VertIndex1, int VertIndex2, int VertIndex3, int Polygon
 	newFace->m_pOrigPolygonindex = PolygonIndex;
 
 	float area = newFace->GetArea();
-	if(area == 0.0f || ZeroArea == true && (gFunction == 0 || gFunction == 1))
+	if((area == 0.0f || ZeroArea == true) && (gFunction == 0 || gFunction == 1))
 	{
 		// zero area face, set all uv's to 0.0f.
 		// If after unwrap one of this triangles verts is 0.0
@@ -366,14 +370,14 @@ int Unwrap::AddPolygon(vector<int> VertIndices)
 {
 	RKPolygon* newPoly = new RKPolygon();
 
-	newPoly->m_numberVertices = VertIndices.size();
+	newPoly->m_numberVertices = (int)VertIndices.size();
 
 	for(int Index = 0; Index < newPoly->m_numberVertices; Index++)
 	{
 		newPoly->m_pVertices.push_back(m_Vertices[VertIndices[Index]]);
 	}
 
-	int retVal = m_Polygons.size();
+	int retVal = (int)m_Polygons.size();
 
 	m_Polygons.push_back(newPoly);
 
@@ -454,7 +458,7 @@ void Unwrap::CreateIslands()
 	{
 		Island* pIsland = new Island();
 		pIsland->SetUpMesh();
-		pIsland->InitEdgeHash(m_Vertices.size());
+		pIsland->InitEdgeHash((int)m_Vertices.size());
 
 		pIsland->AddTriangles(m_Triangles[StartFace]);
 		m_listOfIslands.push_back(pIsland);

@@ -227,7 +227,7 @@ bool WorkingMesh::CutZeroAreas(QuickFace* pTestFace, MFloatPointArray& vertices)
 		int VertIndex3 = pTestFace->m_VertexIndices[LocalIndex3];
 
 
-		bool ZeroArea = false;
+		//bool ZeroArea = false;
 		float v1[3], v2[3], v3[3];
 		double Angle1, Angle2, Angle3;
 		v1[0] = vertices[VertIndex1].x;  v1[1] = vertices[VertIndex1].y;  v1[2] = vertices[VertIndex1].z;
@@ -540,125 +540,6 @@ void WorkingMesh::issuePolyCut(bool hasHistory)
 	int result;
 	MGlobal::executeCommand(polyMapCutCommand, result, false, true);
 }
-
-/*
-void WorkingMesh::DeselectEdges()
-{
-	if(m_SelectedEdges.length() == 0) return;
-
-	SelectEdges(true, false);
-
-	MString result;
-	MString hiliteCommand;
-	hiliteCommand.clear();
-
-	hiliteCommand = "hilite -u ";
-	hiliteCommand += ftransName;
-	MGlobal::executeCommand(hiliteCommand, result, false, true);
-
-
-
-	MString selectCommand;
-	selectCommand.clear();
-
-	selectCommand = "select -r ";
-	selectCommand += ftransName;
-	MGlobal::executeCommand(selectCommand, result, false, true);
-
-}
-
-
-
-void WorkingMesh::SelectEdges(bool hasHistory, bool AddOrRemove)
-{
-	if(m_SelectedEdges.length() == 0) return;
-
-
-	MString polyMapCutCommand;
-	polyMapCutCommand.clear();
-
-	if(!hasHistory)
-	{
-		polyMapCutCommand = "select";
-	}
-	else
-	{
-		polyMapCutCommand = "select";
-	}
-
-	if(AddOrRemove == true)
-	{
-		polyMapCutCommand += " -a";
-	}
-	else
-	{
-		polyMapCutCommand += " -d";
-	}
-
-
-	int start = -1;
-	int end = 0;
-	char Number[20];
-//	set<int>::iterator it;
-
-//	for(it = m_edgesToCut.begin(); it != m_edgesToCut.end(); it++)
-	for(int EdgeIndex = 0; EdgeIndex < m_SelectedEdges.length(); EdgeIndex++)
-	{
-		int next = m_SelectedEdges[EdgeIndex];			//*it;
-
-		if(start == -1) 
-		{
-			start = next;
-			end = next;
-		}
-		else
-		{
-			if(next == end+1)
-			{
-				end = next;
-			}
-			else
-			{
-				polyMapCutCommand += " ";
-				polyMapCutCommand += ftransName;
-
-				if(start == end)
-				{
-					sprintf(Number, ".e[%d]", start);
-					polyMapCutCommand += Number;
-				}
-				else
-				{
-					sprintf(Number, ".e[%d:%d]", start,end);
-					polyMapCutCommand += Number;
-				}
-
-				start = next;
-				end = next;
-			}
-		}
-	}
-
-	polyMapCutCommand += " ";
-	polyMapCutCommand += ftransName;
-
-	if(start == end)
-	{
-		sprintf(Number, ".e[%d]", start);
-		polyMapCutCommand += Number;
-	}
-	else
-	{
-		sprintf(Number, ".e[%d:%d]", start,end);
-		polyMapCutCommand += Number;
-	}
-
-//	m_edgesToCut.clear();
-
-	int result;
-	MGlobal::executeCommand(polyMapCutCommand, result, false, true);
-}
-*/
 
 
 
@@ -1190,7 +1071,7 @@ void WorkingMesh::BodgyGetTriangles(MFnMesh& mesh, MIntArray& triangleCounts, MI
 	triangleVertices.clear();				//setLength(NumPolygons*6);
 
 	int polyIndex = 0;
-	int triIndex = 0;
+	//int triIndex = 0;
 
 	for( ; !polyIter.isDone(); polyIter.next() )
 	{

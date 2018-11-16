@@ -202,7 +202,7 @@ void FindPins::SplitVerts()
 
 	while(iter != splitList.end())
 	{
-		int size = (*iter).second.size();
+		int size = (int)(*iter).second.size();
 
 		if(size > 1)
 		{

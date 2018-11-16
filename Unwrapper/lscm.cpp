@@ -527,7 +527,7 @@ bool LSCMap::SolveMatrixTaucs()
 
 bool LSCMap::Unwrap(vector<RKVertex*> &rVertices, vector<RKFace*> &rFaces, int Pin1, int Pin2, bool UseLSCM)
 {
-	initVariables(rVertices.size() * 2);				// the new stuff!
+	initVariables((int)rVertices.size() * 2);				// the new stuff!
 
 	if(Pin1 != -1)
 	{

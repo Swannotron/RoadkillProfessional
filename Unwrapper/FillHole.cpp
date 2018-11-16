@@ -13,6 +13,9 @@
 #include <math.h>
 
 
+//#define GL_SILENCE_DEPRECATION 1
+
+
 
 
 bool gComplex;
@@ -73,8 +76,8 @@ void FillHole::ReOrder(HoleChunk* pWholeBoundary)
 {
 	vector<int> CwTris;											// clockwise triangles
 
-	int NumberOfTris = pWholeBoundary->m_Triangles.size() / 3;
-	int finalJoin = m_pVertices.size() - 1;
+	int NumberOfTris = (int)pWholeBoundary->m_Triangles.size() / 3;
+	int finalJoin = (int)m_pVertices.size() - 1;
 
 
 	for(int TriIndex = 0; TriIndex < NumberOfTris; TriIndex++)
@@ -123,7 +126,7 @@ void FillHole::ReOrder(HoleChunk* pWholeBoundary)
 				int SrcVertIndex2 = pWholeBoundary->m_Triangles[TriIndex*3+1];
 				int SrcVertIndex3 = pWholeBoundary->m_Triangles[TriIndex*3+2];
 
-				int NumberDestTris = CwTris.size() / 3;
+				int NumberDestTris = (int)CwTris.size() / 3;
 				int action = 0;				// 0 do nothing,  1 copy tri,  2 flip and copy
 
 
@@ -208,7 +211,7 @@ void FillHole::BreakChunk(HoleChunk* pWholeBoundary)
 		CheckChunk(Chunks[0], false);
 	}
 
-	int size = Chunks.size();
+	int size = (int)Chunks.size();
 
 	for(int Index = 1; Index < size; Index++)
 	{
@@ -389,7 +392,7 @@ void FillHole::SplitChunks(HoleChunk* pSourceChunk, HoleChunk* pDestChunk)
 
 void FillHole::GetTri(HoleChunk* pChunk, int EdgeIndex1, int EdgeIndex2, int& TriIndex1, int& TriIndex2, int& TriIndex3)
 {
-	int NumberOfTris = pChunk->m_Triangles.size() / 3;
+	int NumberOfTris = (int)pChunk->m_Triangles.size() / 3;
 
 	for(int TriIndex = 0; TriIndex < NumberOfTris; TriIndex++)
 	{
@@ -397,9 +400,9 @@ void FillHole::GetTri(HoleChunk* pChunk, int EdgeIndex1, int EdgeIndex2, int& Tr
 		TriIndex2 = pChunk->m_Triangles[TriIndex*3+1];
 		TriIndex3 = pChunk->m_Triangles[TriIndex*3+2];
 
-		if(TriIndex1 == EdgeIndex1 && TriIndex2 == EdgeIndex2 || TriIndex1 == EdgeIndex2 && TriIndex2 == EdgeIndex1) return;
-		if(TriIndex2 == EdgeIndex1 && TriIndex3 == EdgeIndex2 || TriIndex2 == EdgeIndex2 && TriIndex3 == EdgeIndex1) return;
-		if(TriIndex3 == EdgeIndex1 && TriIndex1 == EdgeIndex2 || TriIndex3 == EdgeIndex2 && TriIndex1 == EdgeIndex1) return;
+		if(((TriIndex1 == EdgeIndex1) && (TriIndex2 == EdgeIndex2)) || ((TriIndex1 == EdgeIndex2) && (TriIndex2 == EdgeIndex1))) return;
+		if(((TriIndex2 == EdgeIndex1) && (TriIndex3 == EdgeIndex2)) || ((TriIndex2 == EdgeIndex2) && (TriIndex3 == EdgeIndex1))) return;
+		if(((TriIndex3 == EdgeIndex1) && (TriIndex1 == EdgeIndex2)) || ((TriIndex3 == EdgeIndex2) && (TriIndex1 == EdgeIndex1))) return;
 	}
 
 	TriIndex1 = -1;
@@ -463,7 +466,7 @@ list<int>::iterator FillHole::GetPrev(list<int> &Vertices, list<int>::iterator V
 bool FillHole::CheckChunk(HoleChunk* pChunk, bool AngleCheck)
 {
 	double BestPlane[4];
-	int numberVertices = pChunk->m_pVertIndices.size();
+	int numberVertices = (int)pChunk->m_pVertIndices.size();
 	double* weights = new double[numberVertices];
 	int* ReMap = new int[numberVertices];
 	gVertices = new double[numberVertices*3];
@@ -597,8 +600,8 @@ void ftglVertex( void* data, int* pIndices )			//FTMesh* mesh)
 void ftglVertex( void* data, int* pIndices )
 #endif
 {
-	size_t addr1 = (size_t)gVertices;
-	size_t addr2 = (size_t)data;
+//	size_t addr1 = (size_t)gVertices;
+//	size_t addr2 = (size_t)data;
 
 	size_t index = (size_t)data - (size_t)gTripleProjVerts;
 	index /= 24;
@@ -1073,8 +1076,8 @@ int FillHole::EdgeIndex(vector<DelaunayEdge*> &pEdges, int VertIndex1, int VertI
 {
 	for(int Index = 0; Index < pEdges.size(); Index++)
 	{
-		if(pEdges[Index]->m_Vert1Index == VertIndex1 && pEdges[Index]->m_Vert2Index == VertIndex2
-			|| pEdges[Index]->m_Vert1Index == VertIndex2 && pEdges[Index]->m_Vert2Index == VertIndex1)
+		if((pEdges[Index]->m_Vert1Index == VertIndex1 && pEdges[Index]->m_Vert2Index == VertIndex2)
+			|| (pEdges[Index]->m_Vert1Index == VertIndex2 && pEdges[Index]->m_Vert2Index == VertIndex1))
 		{
 			pEdges[Index]->m_Face2Index = FaceIndex;
 			return(Index);
@@ -1088,7 +1091,7 @@ int FillHole::EdgeIndex(vector<DelaunayEdge*> &pEdges, int VertIndex1, int VertI
 	pNewEdge->m_Face2Index = -1;
 	pEdges.push_back(pNewEdge);
 
-	return(pEdges.size()-1);
+	return((int)pEdges.size()-1);
 }
 
 

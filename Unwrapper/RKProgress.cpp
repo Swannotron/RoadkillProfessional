@@ -29,7 +29,7 @@ void RKProgress::CloseProgressWindow()
 }
 
 
-void RKProgress::SetText(char* pNewText)
+void RKProgress::SetText(const char* pNewText)
 {
 	MProgressWindow::setProgressStatus(pNewText);
 }

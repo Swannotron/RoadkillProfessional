@@ -212,7 +212,7 @@ public:
 
 	void FindMinMax(int StickLength, int StickPoint, int& Min, int& Max);
 	void SymUVPoints(float& U1, float& V1, float& U2, float& V2);
-	bool LeftSymTest();
+//	bool LeftSymTest();
 
 private:
 

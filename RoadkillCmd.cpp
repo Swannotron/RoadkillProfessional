@@ -494,8 +494,8 @@ WorkingMesh* RoadkillCmd::findMesh(MString& meshNodeName)
 {
 	for(int Index = 0; Index < m_WorkingList.size(); Index++)
 	{
-		const char* pName = meshNodeName.asChar();
-		const char* pTestName = m_WorkingList[Index]->m_meshNodeName.asChar();
+		//const char* pName = meshNodeName.asChar();
+		//const char* pTestName = m_WorkingList[Index]->m_meshNodeName.asChar();
 
 		if(m_WorkingList[Index]->m_meshNodeName == meshNodeName) return(m_WorkingList[Index]);
 	}

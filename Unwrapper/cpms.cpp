@@ -8,7 +8,7 @@
 
 bool CPMS::SolveCPMS(vector<RKVertex*> &rVertices, vector<RKFace*> &rFaces)
 {
-	m_matrixSize = rVertices.size();
+	m_matrixSize = (int)rVertices.size();
 	m_pBoundaryVerts = new int[m_matrixSize];
 	m_pBoundaryReOrder = new int[m_matrixSize];
 	m_matrixRows = new MatrixRow[m_matrixSize];
@@ -97,7 +97,7 @@ void CPMS::EdgeLengthsAndAngles(vector<RKFace*> &rFaces)
 
 void CPMS::FindKorig(vector<RKVertex*> &rVertices, vector<RKFace*> &rFaces)
 {
-	int numVertices = rVertices.size();
+	int numVertices = (int)rVertices.size();
 	m_pkOrig = new double[numVertices];
 
 	for(int Index = 0; Index < numVertices; Index++) m_pkOrig[Index] = 0.0;

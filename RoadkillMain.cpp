@@ -30,7 +30,7 @@ MStatus initializePlugin(MObject obj)
 {
 	MStatus status;
 
-	MFnPlugin plugin( obj, "(c) 2009 - 2017 Andy Swann", "Version 1.045 R+D", "Any");
+	MFnPlugin plugin( obj, "(c) 2009 - 2018 Andy Swann", "Version 1.045 R+D", "Any");
 
 	status = plugin.registerCommand("RoadkillPro", RoadkillCmd::creator, RoadkillCmd::newSyntax);
 	CHECK_MSTATUS_AND_RETURN_IT(status);

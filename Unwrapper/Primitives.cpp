@@ -132,7 +132,7 @@ void RKVertex::getVertexNormal(double& VNX, double& VNY, double& VNZ)
 {
 	VNX = VNY = VNZ = 0.0f;
 
-	int NumberOfFaces = m_LinkedFaces.size();
+	int NumberOfFaces = (int)m_LinkedFaces.size();
 
 	list<RKFace*>::iterator FaceIterator;
 
@@ -490,7 +490,7 @@ bool RKFace::IntersectUVs(float U1In, float V1In, float U2In, float V2In, float&
 	Vec2V = V2In - Vert2->V;
 	Cross2 = (Vec1U * Vec2V) - (Vec1V * Vec2U);
 
-	if(Cross2 < 0 && Cross1 > 0 || Cross2 > 0 && Cross1 < 0) 
+	if((Cross2 < 0 && Cross1 > 0) || (Cross2 > 0 && Cross1 < 0))
 	{
 		float VecX = Vert2->X - Vert1->X;
 		float VecY = Vert2->Y - Vert1->Y;
@@ -513,7 +513,7 @@ bool RKFace::IntersectUVs(float U1In, float V1In, float U2In, float V2In, float&
 	Vec2V = V2In - Vert3->V;
 	Cross2 = (Vec1U * Vec2V) - (Vec1V * Vec2U);
 
-	if(Cross2 < 0 && Cross1 > 0 || Cross2 > 0 && Cross1 < 0)
+	if((Cross2 < 0 && Cross1 > 0) || (Cross2 > 0 && Cross1 < 0))
 	{
 		float VecX = Vert3->X - Vert2->X;
 		float VecY = Vert3->Y - Vert2->Y;

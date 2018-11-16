@@ -26,7 +26,7 @@ bool CompareIslands(const Island* a, const Island* b)
 
 void Pack::PackIslands(vector<Island*>& listOfIslands, float borderScale)
 {
-	if (gMaintainUVs)
+	if (gMaintainUVs && (gFunction == 0 || gFunction == 1 || gFunction == 7))
 	{
 		MaintainUVs(listOfIslands);
 		return;
@@ -59,7 +59,7 @@ void Pack::PackIslands(vector<Island*>& listOfIslands, float borderScale)
 	{
 		for (int i = 0; i < 15; i++)								// PACK_SEARCH_DEPTH			// I reckon can be a lot less
 		{
-			int TextureSize = (int)(((MinSide + MaxSide)*0.5f + (float)1e-5) * 1024.0f);			//512.0f );
+			//int TextureSize = (int)(((MinSide + MaxSide)*0.5f + (float)1e-5) * 1024.0f);			//512.0f );
 
 			if (ProfilePack( (int) (((MinSide + MaxSide)*0.5f + (float)1e-5) * 1024.0f)) )			//256.0f )) )
 			{
@@ -396,10 +396,10 @@ int Pack::TestFit(int TestX, int BestLowest, Island* pIsland, int& YIndexOut, in
 	int ProfileStartY;
 	bool PrfoileFits;
 	uint64_t* pProfileBits = pIsland->m_pProfileBits;
-	uint64_t BadBits;
+	//uint64_t BadBits;
 	int BestFitRotation = -1;
 
-	int TestUp, XIndex, YIndex, Count;
+	int TestUp, Count;              // XIndex, YIndex,
 
 
 	for (unsigned int RotNumber = 0; RotNumber < NumberTests; RotNumber++)
@@ -1226,25 +1226,25 @@ void Pack::GetUVsForPlane(RKFace* pFace, float& MidPoint, float& U1Out, float& V
 	if(Plane == 1)
 	{
 		float X1 = pFace->pVert1->X;  float X2 = pFace->pVert2->X;  float X3 = pFace->pVert3->X;
-		if(MidPoint > X1 && MidPoint <= X2 || MidPoint > X2 && MidPoint <= X1) DeltaCalc(pFace->pVert1, pFace->pVert2, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 1);
-		if(MidPoint > X2 && MidPoint <= X3 || MidPoint > X3 && MidPoint <= X2) DeltaCalc(pFace->pVert2, pFace->pVert3, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 1);
-		if(MidPoint > X3 && MidPoint <= X1 || MidPoint > X1 && MidPoint <= X3) DeltaCalc(pFace->pVert3, pFace->pVert1, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 1);
+		if((MidPoint > X1 && MidPoint <= X2) || (MidPoint > X2 && MidPoint <= X1)) DeltaCalc(pFace->pVert1, pFace->pVert2, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 1);
+		if((MidPoint > X2 && MidPoint <= X3) || (MidPoint > X3 && MidPoint <= X2)) DeltaCalc(pFace->pVert2, pFace->pVert3, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 1);
+		if((MidPoint > X3 && MidPoint <= X1) || (MidPoint > X1 && MidPoint <= X3)) DeltaCalc(pFace->pVert3, pFace->pVert1, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 1);
 	}
 
 	if(Plane == 2)
 	{
 		float Y1 = pFace->pVert1->Y;  float Y2 = pFace->pVert2->Y;  float Y3 = pFace->pVert3->Y;
-		if(MidPoint > Y1 && MidPoint <= Y2 || MidPoint > Y2 && MidPoint <= Y1) DeltaCalc(pFace->pVert1, pFace->pVert2, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 2);
-		if(MidPoint > Y2 && MidPoint <= Y3 || MidPoint > Y3 && MidPoint <= Y2) DeltaCalc(pFace->pVert2, pFace->pVert3, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 2);
-		if(MidPoint > Y3 && MidPoint <= Y1 || MidPoint > Y1 && MidPoint <= Y3) DeltaCalc(pFace->pVert3, pFace->pVert1, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 2);
+		if((MidPoint > Y1 && MidPoint <= Y2) || (MidPoint > Y2 && MidPoint <= Y1)) DeltaCalc(pFace->pVert1, pFace->pVert2, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 2);
+		if((MidPoint > Y2 && MidPoint <= Y3) || (MidPoint > Y3 && MidPoint <= Y2)) DeltaCalc(pFace->pVert2, pFace->pVert3, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 2);
+		if((MidPoint > Y3 && MidPoint <= Y1) || (MidPoint > Y1 && MidPoint <= Y3)) DeltaCalc(pFace->pVert3, pFace->pVert1, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 2);
 	}
 
 	if(Plane == 3)
 	{
 		float Z1 = pFace->pVert1->Z;  float Z2 = pFace->pVert2->Z;  float Z3 = pFace->pVert3->Z;
-		if(MidPoint > Z1 && MidPoint <= Z2 || MidPoint > Z2 && MidPoint <= Z1) DeltaCalc(pFace->pVert1, pFace->pVert2, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 3);
-		if(MidPoint > Z2 && MidPoint <= Z3 || MidPoint > Z3 && MidPoint <= Z2) DeltaCalc(pFace->pVert2, pFace->pVert3, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 3);
-		if(MidPoint > Z3 && MidPoint <= Z1 || MidPoint > Z1 && MidPoint <= Z3) DeltaCalc(pFace->pVert3, pFace->pVert1, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 3);
+		if((MidPoint > Z1 && MidPoint <= Z2) || (MidPoint > Z2 && MidPoint <= Z1)) DeltaCalc(pFace->pVert1, pFace->pVert2, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 3);
+		if((MidPoint > Z2 && MidPoint <= Z3) || (MidPoint > Z3 && MidPoint <= Z2)) DeltaCalc(pFace->pVert2, pFace->pVert3, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 3);
+		if((MidPoint > Z3 && MidPoint <= Z1) || (MidPoint > Z1 && MidPoint <= Z3)) DeltaCalc(pFace->pVert3, pFace->pVert1, MidPoint, U1Out, V1Out, U2Out, V2Out, firstFound, 3);
 	}
 }
 

@@ -8,11 +8,11 @@ using namespace std;
 
 
 
-class MSyntax;
-class MArgDatabase;
-class MIntArray;
-class MFloatArray;
-class MObject;
+//class MSyntax;
+//class MArgDatabase;
+//class MIntArray;
+//class MFloatArray;
+//class MObject;
 
 
 #define kFunctionFlag				"-f" 

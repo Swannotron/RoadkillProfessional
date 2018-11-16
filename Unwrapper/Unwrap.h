@@ -38,7 +38,7 @@ public:
 	int SetVertexCount(int Size);
 	void AddVertex(int UVIndex, int OriginalVertIndex, float X, float Y, float Z, float U, float V);
 	bool AddFace(int VertIndex1, int VertIndex2, int VertIndex3, int PolygonIndex, bool ZeroArea, int NinetyIndex);
-	int Unwrap::AddPolygon(vector<int> VertIndices);
+	int AddPolygon(vector<int> VertIndices);
 	void DeleteVertsAndFaces();
 
 	vector<RKVertex*> m_Vertices;

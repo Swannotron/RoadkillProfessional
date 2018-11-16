@@ -25,7 +25,7 @@
 #include <list>
 
 
-#include <Eigen/Core>
+#include "Eigen/Core"
 #include <Eigen/SVD>
 #include <Eigen/Geometry> 
 
@@ -45,7 +45,7 @@ using namespace Eigen;
 
 RKEdge* EdgeHash::AddEdge(int VertIndex1, int VertIndex2, float EdgeLen, RKPolygon* pPoly, vector<RKEdge*> &m_Edges)
 {
-	int Size = EdgeList.size();
+//	int Size = EdgeList.size();
 
 	for(int Index = 0; Index < this->EdgeList.size(); Index++)
 	{
@@ -993,7 +993,7 @@ void Island::MinAreaRotate()
 
 	if(PinFinder.m_Boundaries.size() == 0)
 	{
-		numberPoints = this->m_Vertices.size();
+		numberPoints = (int)this->m_Vertices.size();
 		pPointsIn = new RKPoint[numberPoints];
 		pPointsOut = new RKPoint[numberPoints+1];
 
@@ -1006,7 +1006,7 @@ void Island::MinAreaRotate()
 	}
 	else
 	{
-		numberPoints = PinFinder.m_Boundaries[0]->pBoundary.size();
+		numberPoints = (int)PinFinder.m_Boundaries[0]->pBoundary.size();
 		pPointsIn = new RKPoint[numberPoints];
 		pPointsOut = new RKPoint[numberPoints+1];
 
@@ -1814,7 +1814,7 @@ vector<WalkBlock*> Island::FindStartFaces(Island* pIsland)
 		{
 			MinimumSet.clear();
 			MinimumSet = ThisSet;
-			MinimumSize = MinimumSet.size();
+			MinimumSize = (int)MinimumSet.size();
 		}
 	}
 
@@ -1869,7 +1869,7 @@ vector<WalkBlock*> Island::FindStartFacesSym()
 		{
 			MinimumSet.clear();
 			MinimumSet = ThisSet;
-			MinimumSize = MinimumSet.size();
+			MinimumSize = (int)MinimumSet.size();
 		}
 	}
 
@@ -2224,7 +2224,7 @@ DivisionPlane* Island::FindSymmetryPlane()
 	float dummy;
 	bool Symmetrical;
 
-	int NumberOfVertices = m_Vertices.size();
+	int NumberOfVertices = (int)m_Vertices.size();
 	for(int Index = 0; Index < NumberOfVertices; Index++)
 	{
 		m_CentreX += m_Vertices[Index]->X;
@@ -2332,7 +2332,7 @@ bool Island::PlaneTest(double Norm1X, double Norm1Y, double Norm1Z, double Norm2
 
 	int LeftCount = 0;
 	int RightCount = 0;
-	int NumberOfVertices = m_Vertices.size();
+	int NumberOfVertices = (int)m_Vertices.size();
 
 	for(int Index = 0; Index < NumberOfVertices; Index++)
 	{
@@ -2382,7 +2382,7 @@ bool Island::PlaneTest(double Norm1X, double Norm1Y, double Norm1Z, double Norm2
 
 bool Island::MirrorTest(double PlaneA, double PlaneB, double PlaneC, double PlaneD, int FurthestLeft, double maxDist)
 {
-	int NumberOfVertices = m_Vertices.size();
+	int NumberOfVertices = (int)m_Vertices.size();
 
 
 	for(int VertIndex = 0; VertIndex < NumberOfVertices; VertIndex++)
@@ -2409,7 +2409,7 @@ bool Island::MirrorOverlap(int LeftIndex, int RightIndex)
 {
 	int MinimumSize = 10000;
 	m_TestSym = true;
-	WalkBlock testBlock;
+//	WalkBlock testBlock;
 
 	vector<WalkBlock*> StartFaces;
 	vector<RKPolygon*> ThisSet;
@@ -2449,7 +2449,7 @@ bool Island::MirrorOverlap(int LeftIndex, int RightIndex)
 		{
 			MinimumSet.clear();
 			MinimumSet = ThisSet;
-			MinimumSize = MinimumSet.size();
+			MinimumSize = (int)MinimumSet.size();
 		}
 	}
 
@@ -2500,7 +2500,7 @@ void Island::SymUVPoints(float& U1, float& V1, float& U2, float& V2)
 		double  LeftResult = m_DivisionPlane.m_A * pThisVertex->X + m_DivisionPlane.m_B * pThisVertex->Y + m_DivisionPlane.m_C * pThisVertex->Z + m_DivisionPlane.m_D;
 		double RightResult = m_DivisionPlane.m_A * pNextVertex->X + m_DivisionPlane.m_B * pNextVertex->Y + m_DivisionPlane.m_C * pNextVertex->Z + m_DivisionPlane.m_D;
 
-		if(LeftResult <= 0 && RightResult > 0 || LeftResult >= 0 && RightResult < 0 )
+		if((LeftResult <= 0 && RightResult > 0) || (LeftResult >= 0 && RightResult < 0 ))
 		{
 			double Cross = (RightResult - LeftResult);
 			Cross = LeftResult / Cross;
@@ -2540,7 +2540,7 @@ void Island::SymUVPoints(float& U1, float& V1, float& U2, float& V2)
 // find the two nearest and furthest points in 3D space
 // island to the left of the plane should have furthest U to the right of nearest U
 // so if the UV island is upside down it'll flip.   Shit..
-
+/*
 bool Island::LeftSymTest()
 {
 	float MinDist = 1e18;
@@ -2560,12 +2560,12 @@ bool Island::LeftSymTest()
 			float DeltaX = pVert->X - pVert->m_pMatches->X;
 			float DeltaY = pVert->Y - pVert->m_pMatches->Y;
 			float DeltaZ = pVert->Z - pVert->m_pMatches->Z;
-	}
+        }
 	}
 
 	return(true);
 }
-
+*/
 
 
 
@@ -2620,7 +2620,7 @@ void Island::AverageEdges()
 
 	vector<int> HitFacesList;
 
-	int BoundarySize = Boundary.size();		///2 + 2;
+	int BoundarySize = (int)Boundary.size();		///2 + 2;
 
 	for(int Index = 0; Index < BoundarySize; Index++)
 	{
@@ -2647,7 +2647,7 @@ void Island::AverageEdges()
 			}
 		}
 
-		int NumHitFaces = HitFacesList.size();
+		int NumHitFaces = (int)HitFacesList.size();
 
 		if(NumHitFaces != 0)
 		{
@@ -2683,7 +2683,7 @@ void Island::MaintainUVs()
 	float CentreBX = 0.0f;
 	float CentreBY = 0.0f;
 
-	unsigned int NumberOfVertices = m_Vertices.size();
+	unsigned int NumberOfVertices = (unsigned int)m_Vertices.size();
 
 
 	for (unsigned int Index = 0; Index < NumberOfVertices; Index++)
@@ -2749,7 +2749,7 @@ void Island::MaintainUVs()
 	Eigen::Vector2d s = svdOfA.singularValues();
 
 	double f_scale = s.dot(e) / f_sd2_tar;
-	double f_inv_scale = s.dot(e) / f_sd2;
+	//double f_inv_scale = s.dot(e) / f_sd2;
 
 	R *= f_scale;
 

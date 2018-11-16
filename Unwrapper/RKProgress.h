@@ -11,7 +11,7 @@ public:
 
 	void NewProgressWindow();
 	void CloseProgressWindow();
-	void SetText(char* pNewText);
+	void SetText(const char* pNewText);
 	void SetProgress(int Amount);
 
 private:
